@@ -13,9 +13,8 @@ A maioria das opções serão as padrões, exceto por alguns:
 - Partições do disco:
   - 10 GiB serão dedicados para SWAP;
   - 1 GiB será dedicada para o Boot;
-  - 39 GiB serão dedicados para o armazenamento em si ("/"). Como é apenas para estudo, não tudo será salvo em uma única partição.
+  - 39 GiB serão dedicados para o armazenamento em si ("/"). Como é apenas para estudo, tudo será salvo em uma única partição.
 - Sistema:
-  - Como o intuito do estudo é para criar um servidor usando do Grid Infrastructure 21c, para futuramente utilizá-lo para hospedar um banco de dados Oracle, uma interface não se faz necessária;
   - Das ferramentas adicionais disponibilizadas para a instalação, apenas três são pertinentes, sendo elas:
     - Ferramentas de sistema, uma vez que precisamos de ferramentas gerais para a gestão e configuraçaõ dos sistemas;
     - Ferramentas de desenvolvimento, é o básico para o ambiente;
@@ -23,13 +22,22 @@ A maioria das opções serão as padrões, exceto por alguns:
 - Demais configurações:
   - As demais configurações foram mantidas nas opções padrões.
 ## Configuração do servidor
+### Configuração de permissões de acesso ao servidor
 Primeiramente, foi necessário configurar o login root para permitir o acesso por meio de uma máquina externa (lembrando, isso é apenas para estudo, em uma situação corporativa, o usuário root não seria liberado para um acesso externo ao servidor):
 - Primeiramente, foi necessário conferir se o "openssh-server" está presente no sistema (utilizando o comando "dnf list installed | grep ssh"), no caso, não estava;
 - Foi realizada a instalação do "openssh-server";
-- 
-- Então, precisaremos editar o arquivo "/etc/ssh/sshd.config"(no caso, o comando utilizado foi o "nano", mas o "vi" também funciona normalmente). As linhas editadas foram:
+- Então, se fez necessário editar o arquivo "/etc/ssh/sshd.config"(no caso, o comando utilizado foi o "nano", mas o "vi" também funciona normalmente). As linhas editadas foram:
   - PermitRootLogin: valor alterado para "yes";
   - PasswordAuthentication: valor alterado para "yes".
 - Com essas alterações, o login por meio de uma máquina externa já é possível. Para o estudo, duas máquinas serão utilizadas, uma com o sistema operacional Linux Ubuntu, e outro com Windows 11:
-  - No caso do Linux, o acesso foi feito diretamente pelo terminal;
+  - No caso do Linux, o acesso foi feito diretamente pelo terminal com o comando "ssh [user]@[IP do servidor] -p [Porta do servidor]";
   - No caso do Windows 11, o MobaXTerm foi usado (tendo Putty como uma segunda opção).
+### Configuração do Grid Infraesctructure 21c
+Para o Grid, quatro discos serão criados, cada um com 5 GiB de armazenamento. Como o aplicativo utilizado para a configuração da VM é o VirtualBox, então três discos VDI(Imagem virtual). Então, foi realizada a partição dos discos utilizando o comando "fdisk". Abaixo, as opções tomadas no formulário do fdisk:
+- O tipo de partição selecionado foi o primário;
+- O numero da partição, e os setores foram utilizados os valores padrões, uma vez que o disco inteiro será usado para a partição.
+### Configuração do SELinux
+No documento "/etc/selinux/config", a linha "SELINUX" teve seu valor alterado para "PERMISSIVE".
+### Configuração dos hosts
+No documento "/etc/hosts", foi adicionada a linha contendo o IP da VM que usaremos para servidor, e o nome do mesmo. Para testar se as configurações estão de acordo, o ip foi pingado, e retornou sucesso.
+
