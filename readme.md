@@ -23,3 +23,13 @@ A maioria das opções serão as padrões, exceto por alguns:
 - Demais configurações:
   - As demais configurações foram mantidas nas opções padrões.
 ## Configuração do servidor
+Primeiramente, foi necessário configurar o login root para permitir o acesso por meio de uma máquina externa (lembrando, isso é apenas para estudo, em uma situação corporativa, o usuário root não seria liberado para um acesso externo ao servidor):
+- Primeiramente, foi necessário conferir se o "openssh-server" está presente no sistema (utilizando o comando "dnf list installed | grep ssh"), no caso, não estava;
+- Foi realizada a instalação do "openssh-server";
+- 
+- Então, precisaremos editar o arquivo "/etc/ssh/sshd.config"(no caso, o comando utilizado foi o "nano", mas o "vi" também funciona normalmente). As linhas editadas foram:
+  - PermitRootLogin: valor alterado para "yes";
+  - PasswordAuthentication: valor alterado para "yes".
+- Com essas alterações, o login por meio de uma máquina externa já é possível. Para o estudo, duas máquinas serão utilizadas, uma com o sistema operacional Linux Ubuntu, e outro com Windows 11:
+  - No caso do Linux, o acesso foi feito diretamente pelo terminal;
+  - No caso do Windows 11, o MobaXTerm foi usado (tendo Putty como uma segunda opção).
