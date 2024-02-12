@@ -14,9 +14,12 @@ A maioria das opções serão as padrões, exceto por alguns:
   - 10 GiB serão dedicados para SWAP;
   - 1 GiB será dedicada para o Boot;
   - 39 GiB serão dedicados para o armazenamento em si ("/"). Como é apenas para estudo, não tudo será salvo em uma única partição.
-- Sistema;
+- Sistema:
   - Como o intuito do estudo é para criar um servidor usando do Grid Infrastructure 21c, para futuramente utilizá-lo para hospedar um banco de dados Oracle, uma interface não se faz necessária;
-  - Das ferramentas disponibilizadas para a instalação, apenas três são pertinentes, sendo elas:
+  - Das ferramentas adicionais disponibilizadas para a instalação, apenas três são pertinentes, sendo elas:
     - Ferramentas de sistema, uma vez que precisamos de ferramentas gerais para a gestão e configuraçaõ dos sistemas;
     - Ferramentas de desenvolvimento, é o básico para o ambiente;
     - Ferramentas de desempenho, para realizar diagnósticos de performance de sistemas, facilitar troubleshooting, etc.
+- Demais configurações:
+  - As demais configurações foram mantidas nas opções padrões.
+## Configuração do servidor
