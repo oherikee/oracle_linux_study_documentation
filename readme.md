@@ -42,3 +42,23 @@ No documento "/etc/selinux/config", a linha "SELINUX" teve seu valor alterado pa
 No documento "/etc/hosts", foi adicionada a linha contendo o IP da VM que usaremos para servidor, e o nome do mesmo. Para testar se as configurações estão de acordo, o ip foi pingado, e retornou sucesso.
 ### Configuração dos pacotes de Kernel
 Para facilitar a configuração, e como o objetivo do servidor (além de aplicar o aprendizado) é de hospedar um banco de dados Oracle para estudo, utilizaremos o pacote "oracle_database_preinstall_19c", e para o ambiente gráfico o "tigervnc", "xterm" e o "xorg".
+### Configuração dos usuários e grupos de usuários
+Com o oracle preinstall, diversos usuários já foram criados. Porém, de início, os principais serão o "Grid" e o "Oracle":
+- Criação dos usuários em si;
+- Adição dos mesmos nos grupos desejados (todos voltados para o banco de dados Oracle);
+- Senha adicionada para os mesmos.
+### Configuralção dos diretórios
+Usando o padrão OFA da Oracle, a criação dos diretórios foi realizada:
+- Diretórios criados para o Grid;
+- Dono dos mesmos transferido para o usuário "Grid";
+- Permissões mudadas para 775 (Dono e grupo tem acesso total para leitura, escrita e execução, e demais usuários apenas para leitura e execução).
+### Instalação e configuração do OracleASMLib
+Instalação do ASMLib feita de acordo com a documentação da Oracle:
+- "cd /tmp";
+- "wget https://download.oracle.com/otn_software/asmlib/oracleasmlib-2.0.17-1.el8.x86_64.rpm";
+- "wget https://public-yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-2.1.12-1.el8.x86_64.rpm";
+- "yum localinstall ./oracleasm-support-2.1.12-1.el8.x86_64.rpm ./oracleasmlib-2.0.17-1.el8.x86_64.rpm".
+Para a configuração é utilizado o comando "oracleasm configure -i", e estas foram os valores preenchidos no formulário de configuração:
+- Usuário dono da interface: Grid;
+- Grupo de usuário dono da interface: dba;
+- As demais configurações foram as padrões.
