@@ -41,7 +41,7 @@ No documento "/etc/selinux/config", a linha "SELINUX" teve seu valor alterado pa
 ### Configuração dos hosts
 No documento "/etc/hosts", foi adicionada a linha contendo o IP da VM que usaremos para servidor, e o nome do mesmo. Para testar se as configurações estão de acordo, o ip foi pingado, e retornou sucesso.
 ### Configuração dos pacotes de Kernel
-Para facilitar a configuração, e como o objetivo do servidor (além de aplicar o aprendizado) é de hospedar um banco de dados Oracle para estudo, utilizaremos o pacote "oracle_database_preinstall_19c", e para o ambiente gráfico o "tigervnc", "xterm" e o "xorg".
+Para facilitar a configuração, e como o objetivo do servidor (além de aplicar o aprendizado) é de hospedar um banco de dados Oracle para estudo, utilizaremos o pacote "oracle_database_preinstall_21c", e para o ambiente gráfico o "tigervnc", "xterm" e o "xorg".
 ### Configuração dos usuários e grupos de usuários
 Com o oracle preinstall, diversos usuários já foram criados. Porém, de início, os principais serão o "Grid" e o "Oracle":
 - Criação dos usuários em si;
