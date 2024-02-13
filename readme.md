@@ -4,7 +4,7 @@ Estes estudos tem como objetivo praticar a criação de servidores. O servidor q
 Para simular a criação de um servidor, uma máquina virtual foi criada. O aplicativo utilizado foi o Oracle VM VirtualBox.
 - A imagem ISO para a instalação do sistema operacional foi baixada da Oracle eDelivery Cloud;
 - Quase todas as configurações usadas foram as padrões, exeto por;
-  - Rede: Aqui, o modo Bridge será utilizado, uma vez que todas as operações serão realizadas por meio de uma outra máquina, para simular todo o trabalho junto do servidor;
+  - Rede: Aqui, o modo Bridge será utilizado, uma vez que todas as operações serão realizadas por meio de uma outra máquina, visando simular todo o trabalho junto do servidor;
   - Capacidade de armazenamento: 50 GiB;
   - Núcleos de processamento: 4;
   - Memória RAM: 8 GiB.
