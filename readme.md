@@ -47,7 +47,7 @@ Com o oracle preinstall, diversos usuários já foram criados. Porém, de iníci
 - Criação dos usuários em si;
 - Adição dos mesmos nos grupos desejados (todos voltados para o banco de dados Oracle);
 - Senha adicionada para os mesmos.
-### Configuralção dos diretórios
+### Configuração dos diretórios
 Usando o padrão OFA da Oracle, a criação dos diretórios foi realizada:
 - Diretórios criados para o Grid;
 - Dono dos mesmos transferido para o usuário "Grid";
