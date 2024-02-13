@@ -1,4 +1,4 @@
-# Documentação do estudo de criação de servidores com Oracle Linux 9
+# Documentação do estudo de criação de servidores com Oracle Linux 8
 Estes estudos tem como objetivo praticar a criação de servidores. O servidor que será o resultado destes estudos será utilizado para um futuro estudo de administração do banco de dados Oracle. Vale ressaltar que, as escolhas tomadas nem sempre serão as melhores corporativamente falando, mas sim para praticar todas as opções da melhor forma possível (isso será ressaltado também quando alguma escolha contraditória for tomada).
 ## Estabelecimento de uma VM
 Para simular a criação de um servidor, uma máquina virtual foi criada. O aplicativo utilizado foi o Oracle VM VirtualBox.
@@ -8,7 +8,7 @@ Para simular a criação de um servidor, uma máquina virtual foi criada. O apli
   - Capacidade de armazenamento: 50 GiB;
   - Núcleos de processamento: 4;
   - Memória RAM: 8 GiB.
-## Instalação do sistema operacional Oracle Linux 9
+## Instalação do sistema operacional Oracle Linux 8
 A maioria das opções serão as padrões, exceto por alguns:
 - Partições do disco:
   - 10 GiB serão dedicados para SWAP;
