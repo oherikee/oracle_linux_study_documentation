@@ -58,7 +58,8 @@ Instalação do ASMLib feita de acordo com a documentação da Oracle:
 - "wget https://download.oracle.com/otn_software/asmlib/oracleasmlib-2.0.17-1.el8.x86_64.rpm";
 - "wget https://public-yum.oracle.com/repo/OracleLinux/OL8/addons/x86_64/getPackage/oracleasm-support-2.1.12-1.el8.x86_64.rpm";
 - "yum localinstall ./oracleasm-support-2.1.12-1.el8.x86_64.rpm ./oracleasmlib-2.0.17-1.el8.x86_64.rpm".
-Para a configuração é utilizado o comando "oracleasm configure -i", e estas foram os valores preenchidos no formulário de configuração:
+
+Para a configuração é utilizado o comando "oracleasm configure -i", e estes foram os valores preenchidos no formulário de configuração:
 - Usuário dono da interface: Grid;
 - Grupo de usuário dono da interface: dba;
 - As demais configurações foram as padrões.
