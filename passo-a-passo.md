@@ -65,5 +65,3 @@ Para a configuração é utilizado o comando "oracleasm configure -i", e estes f
 - Usuário dono da interface: Grid;
 - Grupo de usuário dono da interface: dba;
 - As demais configurações foram as padrões.
-
-Teste
