@@ -1,5 +1,5 @@
 # Documentação do estudo da Administração de Banco de Dados
-Estes estudos tem como objetivo praticar as práticas de Administração de Banco de Dados, visando utilizar padrões e boas práticas recomendadas pela própria Oracle ou suas comunidades.
+Estes estudos tem como objetivo praticar as práticas de Administração de Banco de Dados, visando utilizar padrões e boas práticas recomendadas pela própria Oracle ou por suas comunidades.
 > [!NOTE]
 > Vale ressaltar que, as escolhas tomadas nem sempre serão as melhores corporativamente falando, mas sim para praticar todas as opções da melhor forma possível (isso será ressaltado também quando alguma escolha contraditória for tomada).
 ## Estabelecimento de uma VM
