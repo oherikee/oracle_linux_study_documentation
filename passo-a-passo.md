@@ -34,7 +34,7 @@ Primeiramente, foi necessário configurar o login root para permitir o acesso po
 - Com essas alterações, o login por meio de uma máquina externa já é possível. Para o estudo, duas máquinas serão utilizadas, uma com o sistema operacional Linux Ubuntu, e outro com Windows 11:
   - No caso do Linux, o acesso foi feito diretamente pelo terminal com o comando "ssh [user]@[IP do servidor] -p [Porta do servidor]";
   - No caso do Windows 11, o MobaXTerm foi usado (tendo Putty como uma segunda opção).
-### Configuração do Grid Infraesctructure 21c
+### Configuração dos discos para o Grid Infraesctructure 21c
 Para o Grid, quatro discos serão criados, cada um com 5 GiB de armazenamento. Como o aplicativo utilizado para a configuração da VM é o VirtualBox, então três discos VDI(Imagem virtual). Então, foi realizada a partição dos discos utilizando o comando "fdisk". Abaixo, as opções tomadas no formulário do fdisk:
 - O tipo de partição selecionado foi o primário;
 - O numero da partição, e os setores foram utilizados os valores padrões, uma vez que o disco inteiro será usado para a partição.
@@ -65,3 +65,5 @@ Para a configuração é utilizado o comando "oracleasm configure -i", e estes f
 - Usuário dono da interface: Grid;
 - Grupo de usuário dono da interface: dba;
 - As demais configurações foram as padrões.
+
+Uma vez que as configurações foram concluídas, camadas de abstrações foram inseridas nos discos criados para o grid utilizando o ASMLib.
