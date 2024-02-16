@@ -67,6 +67,8 @@ Para a configuração é utilizado o comando "oracleasm configure -i", e estes f
 - As demais configurações foram as padrões.
 
 Uma vez que as configurações foram concluídas, camadas de abstrações foram inseridas nos discos criados para o grid utilizando o ASMLib.
+> [!NOTE]
+> Estes discos foram utilizados para o armazenamento de informações, os responsáveis por outras tarefas (recovery, por exemplo) será criados, particionados e configurados posteriormente.
 
 ### Instalação do Grid Infrastructure 21c
 
