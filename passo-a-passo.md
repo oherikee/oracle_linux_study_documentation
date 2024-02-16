@@ -32,7 +32,7 @@ Primeiramente, foi necessário configurar o login root para permitir o acesso po
   - PermitRootLogin: valor alterado para "yes";
   - PasswordAuthentication: valor alterado para "yes".
 - Com essas alterações, o login por meio de uma máquina externa já é possível. Para o estudo, duas máquinas serão utilizadas, uma com o sistema operacional Linux Ubuntu, e outro com Windows 11:
-  - No caso do Linux, o acesso foi feito diretamente pelo terminal com o comando "ssh [user]@[IP do servidor] -p [Porta do servidor]";
+  - No caso do Linux, o acesso foi feito diretamente pelo terminal com o comando "ssh [user]@[ip_do_servidor] -p [porta_do_servidor]";
   - No caso do Windows 11, o MobaXTerm foi usado (tendo Putty como uma segunda opção).
 ### Configuração dos discos para o Grid Infraesctructure 21c
 Para o Grid, quatro discos serão criados, cada um com 5 GiB de armazenamento. Como o aplicativo utilizado para a configuração da VM é o VirtualBox, então três discos VDI(Imagem virtual). Então, foi realizada a partição dos discos utilizando o comando "fdisk". Abaixo, as opções tomadas no formulário do fdisk:
@@ -70,4 +70,5 @@ Uma vez que as configurações foram concluídas, camadas de abstrações foram 
 
 ### Instalação do Grid Infrastructure 21c
 
-Uma vez que o servidor já está configurado, os discos devidamente montados e particionados, a instalação efetiva deve ser feita.
+Uma vez que o servidor já está configurado, os discos devidamente montados e particionados, a instalação efetiva pode ser feita. Então, o arquivo foi baixado na máquina externa (compactado em .zip), então enviado para o servidor por meio de transferências SFTP, tanto no Linux (utilizando o comando "sftp [user]@[ip_do_servidor]"), quanto no Windows 11, também utilizando os recursos SFTP, mas por meio da interface do MobaXTerm.
+Uma vez que o arquivo estava presente no servidor, bastou descompactá-lo na pasta "$ORACLE_HOME" que, no caso, seguindo o padrão OFA, é a "/u01/app/21.0.0.0/grid". Portanto, faltou apenas executar a instalação, utilizando os recursos gráficos X11 Utills (Xterm e Xorg).
