@@ -6,3 +6,9 @@ Uma prática que foi adotada durante todo o processo, é de nunca manipular o se
 Todas as boas práticas, e ferramentas de apoio serão abordadas de uma forma aprofundada no documento ["passo-a-passo.md"](https://github.com/oherikee/oracle_linux_9/blob/main/passo-a-passo.md).
 > [!Important]
 > Vale ressaltar que o objetivo principal do estudo é a adminsitração de banco de dados Oracle em um OS Linux. A criação do servidor para o DB também fará parte do estudo, porém, visando praticar o conhecimento de forma objetiva, o aprofundamento neste campo será realizado em outro momento (quando o estudo for realizado, uma documentação será feita para o mesmo, seu link será disponibilizado aqui).
+## Ferramentas e Metodologias Utilizadas
+Na escolha das ferramentas para a aplicação do estudo, sempre que possível a escolha foi feita dentre as disponibilizadas pela Oracle, visando um alcan. 
+OS: Como sistema operacional foi escolhido o Oracle Linux 8;
+Metodologia de Arquitetura: Oracle Flexible Architecture (OFA);
+Gerenciamento de Recursos: Grid Infraestructure 21c;
+Banco de Dados: Oracle Database 19c.
